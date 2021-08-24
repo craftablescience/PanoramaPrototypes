@@ -1,8 +1,780 @@
-[gd_scene format=2]
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://MenuPlay.gd" type="Script" id=1]
+[ext_resource path="res://play.png" type="Texture" id=2]
+[ext_resource path="res://settings.png" type="Texture" id=3]
+[ext_resource path="res://p2celogo.jpg" type="Texture" id=4]
+[ext_resource path="res://exit.png" type="Texture" id=5]
+[ext_resource path="res://peti.png" type="Texture" id=6]
+[ext_resource path="res://p2logo.jpg" type="Texture" id=7]
+[ext_resource path="res://revologo.jpg" type="Texture" id=8]
+[ext_resource path="res://abysslogo.jpg" type="Texture" id=9]
+[ext_resource path="res://community_bg1.ogv" type="VideoStream" id=10]
+[ext_resource path="res://ConceptJJl77.gd" type="Script" id=11]
+[ext_resource path="res://community_bg1_bg.png" type="Texture" id=12]
+[ext_resource path="res://addons.png" type="Texture" id=13]
+[ext_resource path="res://Exit.gd" type="Script" id=14]
+[ext_resource path="res://mlugg_bg_2.tres" type="StyleBox" id=15]
+[ext_resource path="res://pee.png" type="Texture" id=16]
+[ext_resource path="res://Portal_2_Official_Logo.png" type="Texture" id=17]
+[ext_resource path="res://Portal_2_CE_Official_Logo.png" type="Texture" id=18]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.196078, 0.196078, 0.196078, 0.784314 )
 
 [node name="ConceptJJl77" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_clip_content = true
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MenuCampaigns" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = -8.0
+margin_right = 4.0
+margin_bottom = 4.0
+tabs_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2CE" type="Panel" parent="MenuCampaigns"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="MenuCampaigns/P2CE"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VideoPlayer" type="VideoPlayer" parent="MenuCampaigns/P2CE"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 10 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="MenuCampaigns/P2CE"]
+anchor_left = 0.313382
+anchor_top = 0.0471106
+anchor_right = 0.6835
+anchor_bottom = 0.274084
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Addons" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/Addons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuCampaigns/Addons"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 118.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ADDONS GO HERE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuCampaigns/Settings"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_right = 118.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SETTINGS GO HERE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PETI" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/PETI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="MenuCampaigns/PETI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 64.9305
+margin_top = -30.545
+margin_right = 134.931
+margin_bottom = -16.545
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PETI MENU"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="REVOLUTION" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/REVOLUTION"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="MenuCampaigns/REVOLUTION"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.157
+margin_top = -28.8633
+margin_right = 351.843
+margin_bottom = 19.1367
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "REVOLUTION MENU
+
+Also yes I know this won't be a workshop campaign, I needed a placeholder"
+align = 1
+
+[node name="ABYSS" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/ABYSS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="MenuCampaigns/ABYSS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.157
+margin_top = -28.8633
+margin_right = 351.843
+margin_bottom = 19.1367
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ABYSS MENU
+
+Also yes I know this won't be a workshop campaign, I needed a placeholder"
+align = 1
+
+[node name="PORTAL 2" type="Panel" parent="MenuCampaigns"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="MenuCampaigns/PORTAL 2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="MenuCampaigns/PORTAL 2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 64.9305
+margin_top = -30.545
+margin_right = 134.931
+margin_bottom = -16.545
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PORTAL 2 MENU"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="MenuCampaigns/PORTAL 2"]
+anchor_left = 0.313382
+anchor_top = 0.0471106
+anchor_right = 0.6835
+anchor_bottom = 0.274084
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MenuTabs" type="TabContainer" parent="."]
+anchor_right = 0.25
+anchor_bottom = 1.0
+margin_left = 56.0
+margin_top = -8.0
+margin_bottom = 4.0
+tabs_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuPlay" type="Control" parent="MenuTabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuPlay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuPlay" type="VBoxContainer" parent="MenuTabs/MenuPlay"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+custom_constants/separation = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2CE" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
+margin_right = 192.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuPlay/MenuPlay/P2CE"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "P2CE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PETI" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
+margin_top = 60.0
+margin_right = 192.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuPlay/MenuPlay/PETI"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.714
+margin_bottom = 35.1893
+text = "PETI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="REVOLUTION" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
+margin_top = 120.0
+margin_right = 192.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuPlay/MenuPlay/REVOLUTION"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.714
+margin_bottom = 35.1893
+text = "Revolution"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ABYSS" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
+margin_top = 180.0
+margin_right = 192.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuPlay/MenuPlay/ABYSS"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.714
+margin_bottom = 35.1893
+text = "Abyss"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
+margin_top = 240.0
+margin_right = 192.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuPlay/MenuPlay/P2"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.714
+margin_bottom = 35.1893
+text = "Portal 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuAddons" type="Control" parent="MenuTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuAddons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuAddons" type="VBoxContainer" parent="MenuTabs/MenuAddons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 260.0
+size_flags_vertical = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_right = 192.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 70 )
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/CenterContainer"]
+margin_left = 11.0
+margin_top = 2.0
+margin_right = 181.0
+margin_bottom = 67.0
+text = "What these would do is
+open a popup with options
+to manage the item. This
+menu stays open."
+align = 1
+
+[node name="PEE1" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 70.0
+margin_right = 192.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE1"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 1 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PEE2" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 130.0
+margin_right = 192.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE2"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 2 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PEE3" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 190.0
+margin_right = 192.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE3"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 3 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PEE4" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 250.0
+margin_right = 192.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE4"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 4 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PEE5" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 310.0
+margin_right = 192.0
+margin_bottom = 370.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE5"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 5 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PEE6" type="TextureButton" parent="MenuTabs/MenuAddons/MenuAddons"]
+margin_top = 370.0
+margin_right = 192.0
+margin_bottom = 430.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 16 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MenuTabs/MenuAddons/MenuAddons/PEE6"]
+margin_left = 70.0
+margin_top = 21.1893
+margin_right = 101.0
+margin_bottom = 35.1893
+text = "PEE 6 Asset Pack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuSettings" type="Control" parent="MenuTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuSettings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuSettings" type="VBoxContainer" parent="MenuTabs/MenuSettings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 260.0
+size_flags_vertical = 3
+custom_constants/separation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MenuTabs/MenuSettings/MenuSettings"]
+margin_right = 192.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+
+[node name="Label" type="Label" parent="MenuTabs/MenuSettings/MenuSettings/CenterContainer"]
+margin_left = 13.0
+margin_top = 4.0
+margin_right = 178.0
+margin_bottom = 86.0
+text = "This menu does not close
+while you are browsing
+the settings. It also only
+scrolls to different parts
+of the same panel."
+align = 1
+
+[node name="Button" type="Button" parent="MenuTabs/MenuSettings/MenuSettings"]
+margin_top = 94.0
+margin_right = 192.0
+margin_bottom = 114.0
+text = "Audio"
+
+[node name="Button2" type="Button" parent="MenuTabs/MenuSettings/MenuSettings"]
+margin_top = 118.0
+margin_right = 192.0
+margin_bottom = 138.0
+text = "Graphics"
+
+[node name="Button3" type="Button" parent="MenuTabs/MenuSettings/MenuSettings"]
+margin_top = 142.0
+margin_right = 192.0
+margin_bottom = 162.0
+text = "Controls"
+
+[node name="Button11" type="Button" parent="MenuTabs/MenuSettings/MenuSettings"]
+margin_top = 166.0
+margin_right = 192.0
+margin_bottom = 186.0
+text = "Gilligan's Isle"
+
+[node name="MenuExit" type="Control" parent="MenuTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 8.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuExit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuTabs/MenuExit"]
+margin_left = 18.3626
+margin_top = 19.9414
+margin_right = 142.363
+margin_bottom = 33.9414
+text = "Are you sure mate?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitYes" type="Button" parent="MenuTabs/MenuExit"]
+margin_left = 26.5486
+margin_top = 54.8477
+margin_right = 125.549
+margin_bottom = 74.8477
+text = "Yeah I'm sure"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitNo" type="Button" parent="MenuTabs/MenuExit"]
+margin_left = 47.7076
+margin_top = 94.1767
+margin_right = 95.7076
+margin_bottom = 114.177
+text = "Nah"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButtonsBG" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_right = 60.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButtons" type="VBoxContainer" parent="."]
+anchor_bottom = 1.0
+margin_right = 60.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2CE" type="TextureButton" parent="MenuButtons"]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Play" type="TextureButton" parent="MenuButtons"]
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Addons" type="TextureButton" parent="MenuButtons"]
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 13 )
+expand = true
+
+[node name="Settings" type="TextureButton" parent="MenuButtons"]
+margin_top = 180.0
+margin_right = 60.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Exit" type="TextureButton" parent="MenuButtons"]
+margin_top = 240.0
+margin_right = 60.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 60 )
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 14 )
+
+[connection signal="finished" from="MenuCampaigns/P2CE/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/P2CE" to="MenuTabs/MenuPlay/MenuPlay" method="_on_P2CE_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/PETI" to="MenuTabs/MenuPlay/MenuPlay" method="_on_PETI_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/REVOLUTION" to="MenuTabs/MenuPlay/MenuPlay" method="_on_REVOLUTION_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/ABYSS" to="MenuTabs/MenuPlay/MenuPlay" method="_on_ABYSS_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/P2" to="MenuTabs/MenuPlay/MenuPlay" method="_on_P2_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuSettings/MenuSettings/Button11" to="." method="_on_Button11_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuExit/ExitYes" to="." method="_on_ExitYes_pressed"]
+[connection signal="pressed" from="MenuTabs/MenuExit/ExitNo" to="." method="_on_ExitNo_pressed"]
+[connection signal="pressed" from="MenuButtons/P2CE" to="." method="_on_P2CE_pressed"]
+[connection signal="pressed" from="MenuButtons/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MenuButtons/Addons" to="." method="_on_Addons_pressed"]
+[connection signal="pressed" from="MenuButtons/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="MenuButtons/Exit" to="." method="_on_Exit_pressed"]

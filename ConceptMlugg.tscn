@@ -245,6 +245,54 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="QuitMenu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="MenuContainer/QuitMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Are you sure?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="MenuContainer/QuitMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -98.2427
+margin_top = 18.6584
+margin_right = -24.2427
+margin_bottom = 38.6584
+text = "Definitely"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="MenuContainer/QuitMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -13.5118
+margin_top = 19.2873
+margin_right = 151.488
+margin_bottom = 39.2873
+text = "No let me think about it"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Titlebar" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 0.1
@@ -423,9 +471,11 @@ __meta__ = {
 }
 
 [connection signal="finished" from="MenuContainer/P2CE Menu/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="MenuContainer/QuitMenu/Button" to="Titlebar/Quit" method="_on_Button_pressed"]
+[connection signal="pressed" from="MenuContainer/QuitMenu/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Titlebar/WorkshopAddons" to="." method="_on_WorkshopAddons_pressed"]
 [connection signal="pressed" from="Titlebar/Settings" to="." method="_on_Settings_pressed"]
-[connection signal="pressed" from="Titlebar/Quit" to="Titlebar/Quit" method="_on_Quit_pressed"]
+[connection signal="pressed" from="Titlebar/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="CampaignPicker" to="." method="_on_CampaignPicker_pressed"]
 [connection signal="pressed" from="Picker/VBoxContainer/P2CE" to="." method="_on_P2CE_pressed"]
 [connection signal="pressed" from="Picker/VBoxContainer/PETI" to="." method="_on_PETI_pressed"]

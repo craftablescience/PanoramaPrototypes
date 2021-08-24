@@ -49,6 +49,13 @@ func _on_Settings_pressed():
 	$MenuContainer.current_tab = 1
 	$Picker.hide()
 
+func _on_Quit_pressed():
+	$MenuContainer.current_tab = 7
+	$Picker.hide()
+
+func _on_Button2_pressed():
+	# Ideally it would go to the last selected campaign but I'm lazy
+	_on_P2CE_pressed()
 
 func _on_VideoPlayer_finished():
 	$"MenuContainer/P2CE Menu/VideoPlayer".play()
