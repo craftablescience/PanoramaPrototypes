@@ -1,0 +1,387 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://p2celogo.jpg" type="Texture" id=1]
+[ext_resource path="res://unknown2.png" type="Texture" id=2]
+[ext_resource path="res://ConceptMlugg.gd" type="Script" id=3]
+[ext_resource path="res://Quit.gd" type="Script" id=4]
+[ext_resource path="res://mlugg_bg.tres" type="StyleBox" id=5]
+[ext_resource path="res://mlugg_bg_2.tres" type="StyleBox" id=6]
+[ext_resource path="res://abysslogo.jpg" type="Texture" id=7]
+[ext_resource path="res://revologo.jpg" type="Texture" id=8]
+[ext_resource path="res://p2logo.jpg" type="Texture" id=9]
+[ext_resource path="res://peti.png" type="Texture" id=10]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.705882, 0.705882, 0.705882, 1 )
+
+[node name="ConceptMlugg" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Concepts" type="Node2D" parent="."]
+
+[node name="unknown2" type="Sprite" parent="Concepts"]
+position = Vector2( 516.729, -404.505 )
+scale = Vector2( 0.786782, 0.787141 )
+texture = ExtResource( 2 )
+
+[node name="MenuContainer" type="TabContainer" parent="."]
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -4.0
+margin_top = -8.0
+margin_right = 4.0
+margin_bottom = 4.0
+custom_constants/top_margin = 0
+tabs_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddonMenu" type="Panel" parent="MenuContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="MenuContainer/AddonMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "WORKSHOP MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SettingsMenu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="MenuContainer/SettingsMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SETTINGS MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="P2CE Menu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer/P2CE Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "P2CE MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="P2 Menu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer/P2 Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PORTAL 2 MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PETI Menu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer/PETI Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PETI MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Revolution Menu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer/Revolution Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "REVOLUTION MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Abyss Menu" type="Panel" parent="MenuContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuContainer/Abyss Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ABYSS MENU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titlebar" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.1
+custom_styles/panel = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="WorkshopAddons" type="Button" parent="Titlebar"]
+anchor_left = 0.2
+anchor_top = 0.075
+anchor_right = 0.2
+anchor_bottom = 0.075
+margin_right = 128.0
+margin_bottom = 40.0
+text = "Workshop Addons"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Settings" type="Button" parent="Titlebar"]
+anchor_left = 0.5
+anchor_top = 0.075
+anchor_right = 0.51
+anchor_bottom = 0.075
+margin_right = 63.0
+margin_bottom = 40.0
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Quit" type="Button" parent="Titlebar"]
+anchor_left = 0.85
+anchor_top = 0.075
+anchor_right = 0.86
+anchor_bottom = 0.075
+margin_right = 40.0
+margin_bottom = 40.0
+text = "Quit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CampaignPicker" type="TextureButton" parent="."]
+anchor_right = 0.0634766
+anchor_bottom = 0.1
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Picker" type="ScrollContainer" parent="."]
+visible = false
+anchor_top = 0.1
+anchor_right = 0.3
+anchor_bottom = 0.7
+custom_styles/bg = SubResource( 2 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Picker"]
+margin_right = 307.2
+margin_bottom = 500.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+
+[node name="P2CE" type="TextureButton" parent="Picker/VBoxContainer"]
+margin_right = 295.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Picker/VBoxContainer/P2CE"]
+margin_left = 111.244
+margin_top = 41.8488
+margin_right = 151.244
+margin_bottom = 55.8488
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "P2CE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PETI" type="TextureButton" parent="Picker/VBoxContainer"]
+margin_top = 100.0
+margin_right = 295.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 10 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Picker/VBoxContainer/PETI"]
+margin_left = 111.244
+margin_top = 41.8488
+margin_right = 151.244
+margin_bottom = 55.8488
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PETI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Revolution" type="TextureButton" parent="Picker/VBoxContainer"]
+margin_top = 200.0
+margin_right = 295.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Picker/VBoxContainer/Revolution"]
+margin_left = 111.244
+margin_top = 41.8488
+margin_right = 151.244
+margin_bottom = 55.8488
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Revolution"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Abyss" type="TextureButton" parent="Picker/VBoxContainer"]
+margin_top = 300.0
+margin_right = 295.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Picker/VBoxContainer/Abyss"]
+margin_left = 111.244
+margin_top = 41.8488
+margin_right = 151.244
+margin_bottom = 55.8488
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Abyss"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P2" type="TextureButton" parent="Picker/VBoxContainer"]
+margin_top = 400.0
+margin_right = 295.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 9 )
+expand = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Picker/VBoxContainer/P2"]
+margin_left = 111.244
+margin_top = 41.8488
+margin_right = 151.244
+margin_bottom = 55.8488
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Portal 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Titlebar/WorkshopAddons" to="." method="_on_WorkshopAddons_pressed"]
+[connection signal="pressed" from="Titlebar/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="Titlebar/Quit" to="Titlebar/Quit" method="_on_Quit_pressed"]
+[connection signal="pressed" from="CampaignPicker" to="." method="_on_CampaignPicker_pressed"]
+[connection signal="pressed" from="Picker/VBoxContainer/P2CE" to="." method="_on_P2CE_pressed"]
+[connection signal="pressed" from="Picker/VBoxContainer/PETI" to="." method="_on_PETI_pressed"]
+[connection signal="pressed" from="Picker/VBoxContainer/Revolution" to="." method="_on_Revolution_pressed"]
+[connection signal="pressed" from="Picker/VBoxContainer/Abyss" to="." method="_on_Abyss_pressed"]
+[connection signal="pressed" from="Picker/VBoxContainer/P2" to="." method="_on_P2_pressed"]
