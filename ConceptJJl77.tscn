@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://MenuPlay.gd" type="Script" id=1]
 [ext_resource path="res://play.png" type="Texture" id=2]
@@ -18,14 +18,30 @@
 [ext_resource path="res://pee.png" type="Texture" id=16]
 [ext_resource path="res://Portal_2_Official_Logo.png" type="Texture" id=17]
 [ext_resource path="res://Portal_2_CE_Official_Logo.png" type="Texture" id=18]
+[ext_resource path="res://unknown.png" type="Texture" id=19]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.196078, 0.196078, 0.196078, 0.784314 )
 
 [node name="ConceptJJl77" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_clip_content = true
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -34,10 +50,10 @@ __meta__ = {
 [node name="MenuCampaigns" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -4.0
-margin_top = -8.0
-margin_right = 4.0
-margin_bottom = 4.0
+custom_styles/tab_fg = SubResource( 6 )
+custom_styles/tab_disabled = SubResource( 7 )
+custom_styles/tab_bg = SubResource( 8 )
+custom_styles/panel = SubResource( 9 )
 tabs_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -46,10 +62,6 @@ __meta__ = {
 [node name="P2CE" type="Panel" parent="MenuCampaigns"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 8.0
-margin_right = -4.0
-margin_bottom = -4.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -319,12 +331,13 @@ __meta__ = {
 }
 
 [node name="MenuTabs" type="TabContainer" parent="."]
-visible = false
 anchor_right = 0.25
 anchor_bottom = 1.0
-margin_left = 56.0
-margin_top = -8.0
-margin_bottom = 4.0
+margin_left = 60.0
+custom_styles/tab_fg = SubResource( 1 )
+custom_styles/tab_disabled = SubResource( 2 )
+custom_styles/tab_bg = SubResource( 3 )
+custom_styles/panel = SubResource( 4 )
 tabs_visible = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -333,10 +346,6 @@ __meta__ = {
 [node name="MenuPlay" type="Control" parent="MenuTabs"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 8.0
-margin_right = -4.0
-margin_bottom = -4.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -344,7 +353,7 @@ __meta__ = {
 [node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuPlay"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -360,7 +369,7 @@ __meta__ = {
 }
 
 [node name="P2CE" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
-margin_right = 192.0
+margin_right = 196.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 4 )
@@ -379,7 +388,7 @@ __meta__ = {
 
 [node name="PETI" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
 margin_top = 60.0
-margin_right = 192.0
+margin_right = 196.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 6 )
@@ -398,7 +407,7 @@ __meta__ = {
 
 [node name="REVOLUTION" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
 margin_top = 120.0
-margin_right = 192.0
+margin_right = 196.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 8 )
@@ -417,7 +426,7 @@ __meta__ = {
 
 [node name="ABYSS" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
 margin_top = 180.0
-margin_right = 192.0
+margin_right = 196.0
 margin_bottom = 240.0
 rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 9 )
@@ -436,7 +445,7 @@ __meta__ = {
 
 [node name="P2" type="TextureButton" parent="MenuTabs/MenuPlay/MenuPlay"]
 margin_top = 240.0
-margin_right = 192.0
+margin_right = 196.0
 margin_bottom = 300.0
 rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 7 )
@@ -468,7 +477,7 @@ __meta__ = {
 [node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuAddons"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -628,7 +637,7 @@ __meta__ = {
 [node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuSettings"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -699,7 +708,7 @@ __meta__ = {
 [node name="MenuTabsBG" type="Panel" parent="MenuTabs/MenuExit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -791,6 +800,11 @@ rect_min_size = Vector2( 0, 60 )
 texture_normal = ExtResource( 5 )
 expand = true
 script = ExtResource( 14 )
+
+[node name="unknown" type="Sprite" parent="."]
+position = Vector2( 511.321, -476.949 )
+scale = Vector2( 0.777712, 0.777712 )
+texture = ExtResource( 19 )
 
 [connection signal="finished" from="MenuCampaigns/P2CE/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
 [connection signal="pressed" from="MenuTabs/MenuPlay/MenuPlay/P2CE" to="MenuTabs/MenuPlay/MenuPlay" method="_on_P2CE_pressed"]
