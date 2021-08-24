@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://ConceptMlugg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://window.png" type="Texture" id=2]
+[ext_resource path="res://ConceptJJl77.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -10,43 +11,66 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Concepts" type="TabContainer" parent="."]
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.99
+anchor_bottom = 0.985
+custom_constants/side_margin = 268
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MLUGG\'S CONCEPT" type="TextureRect" parent="Concepts"]
 anchor_right = 1.0
-anchor_bottom = 0.04
-alignment = 1
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Button" type="Button" parent="HBoxContainer"]
-margin_left = 422.0
-margin_right = 447.0
-margin_bottom = 24.0
-text = "<-"
+[node name="ConceptMlugg" parent="Concepts/MLUGG\'S CONCEPT" instance=ExtResource( 1 )]
+show_behind_parent = true
+anchor_top = 0.038
 
-[node name="Label" type="Label" parent="HBoxContainer"]
-margin_left = 451.0
-margin_top = 5.0
-margin_right = 573.0
-margin_bottom = 19.0
-text = "MLUGG'S CONCEPT"
-
-[node name="Button2" type="Button" parent="HBoxContainer"]
-margin_left = 577.0
-margin_right = 602.0
-margin_bottom = 24.0
-text = "->"
-
-[node name="ConceptMlugg" parent="." instance=ExtResource( 1 )]
-anchor_left = 0.00976563
-anchor_top = 0.0766667
-anchor_right = 0.990234
-anchor_bottom = 0.98
-
-[node name="WindowBG" type="TextureRect" parent="ConceptMlugg"]
-anchor_top = -0.04
+[node name="JJL77\'S CONCEPT" type="TextureRect" parent="Concepts"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ConceptJJl77" parent="Concepts/JJL77\'S CONCEPT" instance=ExtResource( 3 )]
+visible = false
+margin_left = -4.0
+margin_top = -32.0
+margin_right = -12.0
+margin_bottom = -68.0
+
+[node name="PERMATEMP\'S CONCEPT" type="TextureRect" parent="Concepts"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 mouse_filter = 2
 texture = ExtResource( 2 )
 expand = true
