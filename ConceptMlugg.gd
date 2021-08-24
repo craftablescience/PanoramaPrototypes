@@ -6,6 +6,8 @@ var peti = preload("res://peti.png")
 var revo = preload("res://revologo.jpg")
 var abyss = preload("res://abysslogo.jpg")
 
+func _ready():
+	_on_P2CE_pressed()
 
 func _on_CampaignPicker_pressed():
 	if $Picker.visible:
