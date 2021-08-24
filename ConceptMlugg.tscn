@@ -266,12 +266,12 @@ __meta__ = {
 }
 
 [node name="WorkshopAddons" type="Button" parent="Titlebar"]
-anchor_left = 0.2
-anchor_top = 0.075
-anchor_right = 0.2
-anchor_bottom = 0.075
-margin_right = 128.0
-margin_bottom = 40.0
+anchor_left = 0.200195
+anchor_top = 0.08
+anchor_right = 0.325195
+anchor_bottom = 0.92
+margin_right = -3.05176e-05
+margin_bottom = -0.0200043
 text = "Workshop Addons"
 __meta__ = {
 "_edit_use_anchors_": true
@@ -279,23 +279,23 @@ __meta__ = {
 
 [node name="Settings" type="Button" parent="Titlebar"]
 anchor_left = 0.5
-anchor_top = 0.075
-anchor_right = 0.51
-anchor_bottom = 0.075
-margin_right = 63.0
-margin_bottom = 40.0
+anchor_top = 0.08
+anchor_right = 0.571766
+anchor_bottom = 0.92
+margin_right = -0.488037
+margin_bottom = -0.0200043
 text = "Settings"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="Quit" type="Button" parent="Titlebar"]
-anchor_left = 0.85
-anchor_top = 0.075
-anchor_right = 0.86
-anchor_bottom = 0.075
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 0.849609
+anchor_top = 0.08
+anchor_right = 0.898375
+anchor_bottom = 0.92
+margin_right = 0.0639648
+margin_bottom = -0.0200043
 text = "Quit"
 script = ExtResource( 4 )
 __meta__ = {
