@@ -3,11 +3,6 @@ extends Control
 func _on_VideoPlayer_finished():
 	$MenuCampaigns/P2CE/VideoPlayer.play()
 
-
-func _on_P2CE_pressed():
-	$MenuCampaigns.current_tab = 0
-	$MenuTabs.hide()
-
 func _on_tab_pressed(tab):
 	if $MenuTabs.visible and $MenuTabs.current_tab == tab:
 		$MenuTabs.hide()
