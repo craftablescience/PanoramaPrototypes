@@ -23,6 +23,7 @@ __meta__ = {
 }
 
 [node name="MLUGG\'S CONCEPT" type="TextureRect" parent="Concepts"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -94,3 +95,36 @@ stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="NOTES" type="Control" parent="Concepts"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Concepts/NOTES"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Concepts/NOTES/VBoxContainer"]
+margin_right = 995.0
+margin_bottom = 14.0
+text = "- There should be a search box for the campaign list, addon list, and settings interface"
+
+[node name="Label2" type="Label" parent="Concepts/NOTES/VBoxContainer"]
+margin_top = 18.0
+margin_right = 995.0
+margin_bottom = 32.0
+text = "- Flow of the menu should be left to right"
+
+[node name="Label3" type="Label" parent="Concepts/NOTES/VBoxContainer"]
+margin_top = 36.0
+margin_right = 995.0
+margin_bottom = 50.0
+text = "- It should allow workshop campaigns to set their own menus, and the P2CE menu will be a good template for them"
