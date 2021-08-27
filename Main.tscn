@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ConceptMlugg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://window.png" type="Texture" id=2]
 [ext_resource path="res://ConceptJJl77.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ConceptPermatemp.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -59,7 +60,7 @@ __meta__ = {
 [node name="ConceptJJl77" parent="Concepts/JJL77\'S CONCEPT" instance=ExtResource( 3 )]
 anchor_top = 0.038
 
-[node name="CRAFTABLESCIENCE\'S CONCEPT" type="TextureRect" parent="Concepts"]
+[node name="PERMATEMP\'S CONCEPT" type="TextureRect" parent="Concepts"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -75,7 +76,10 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="PERMATEMP\'S CONCEPT2" type="TextureRect" parent="Concepts"]
+[node name="ConceptPermatemp" parent="Concepts/PERMATEMP\'S CONCEPT" instance=ExtResource( 4 )]
+anchor_top = 0.038
+
+[node name="PIGUY\'S CONCEPT" type="TextureRect" parent="Concepts"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
